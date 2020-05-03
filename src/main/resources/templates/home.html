@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="/fragments/header :: header-frag"/>
+</head>
+<body>
+
+<div th:replace="/fragments/header ::  header-main-frag"/>
+<div class="container">
+    <div th:replace="/fragments/posts :: posts-frag"/>
+    <div th:replace="/fragments/pagination :: pagination-frag(URLparameter='/home')"/>
+</div>
+<div th:replace="/fragments/footer :: footer-frag"/>
+
+</body>
+</html>

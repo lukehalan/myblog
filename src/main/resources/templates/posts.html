@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="/fragments/header :: header-frag"/>
+</head>
+<body>
+
+<div th:replace="/fragments/header ::  header-main-frag"/>
+
+<div class="container">
+
+    <div class="jumbotron">
+        <h1 th:text="${user.name} + '\'s Blog'"></h1>
+    </div>
+
+    <br style="margin-bottom: 20px"/>
+
+
+    <div th:replace="/fragments/posts :: posts-frag"/>
+
+    <div th:replace="/fragments/pagination :: pagination-frag(URLparameter='/blog/' + ${user.username})"/>
+
+</div>
+
+<div th:replace="/fragments/footer :: footer-frag"/>
+
+</body>
+</html>

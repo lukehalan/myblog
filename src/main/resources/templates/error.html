@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="/fragments/header :: header-frag"/>
+</head>
+<body>
+
+<div th:replace="/fragments/header :: header-main-frag"/>
+
+<div class="container">
+
+    <h1 th:if="${errMsg}" th:utext="${errMsg}">System Error</h1>
+    <h1 th:if="!${errMsg}">404 - Wrong Page</h1>
+    <a href="home.html" th:href="@{/home}">Back to Home Page</a>
+
+</div>
+
+<div th:replace="/fragments/footer :: footer-frag"/>
+
+</body>
+</html>
